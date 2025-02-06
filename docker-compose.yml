@@ -1,0 +1,11 @@
+services:
+  nifi:
+    image: 
+      apache/nifi:2.1.0
+    environment:
+      SINGLE_USER_CREDENTIALS_USERNAME: admin
+      SINGLE_USER_CREDENTIALS_PASSWORD: admin123456789
+    volumes:
+      - C:\Users\User1\Desktop\work\nifi_docker\python_extensions:/opt/nifi/nifi-current/python_extensions
+    ports:
+      - 8443:8443
